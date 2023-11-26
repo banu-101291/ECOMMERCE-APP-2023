@@ -1,4 +1,6 @@
 import userModel from "../models/userModel.js"
+import {  hashPassword } from "./../helpers/authHelper.js";
+
 
 
 export const registerController =async(req,res) =>{
@@ -24,9 +26,7 @@ export const registerController =async(req,res) =>{
                 return res.send({error:"address is required"})
              }
 
-             if(!role){
-                return res.send({error:"role is required"})
-             }
+             
              
              const existingUser = await userModel.findOne({email})
                

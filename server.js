@@ -22,7 +22,7 @@ app.get('/',(req,res)=> {
 app.use('/api/v1/auth',authRoute)
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8050;
 
 app.listen(PORT,()=>{
      console.log(`server is Running on ${process.env.DEV_MODE} mode on port ${PORT}`)
